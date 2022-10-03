@@ -146,7 +146,6 @@ public class Parejas extends JFrame {
 		
 		btnCarta1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
 
 			}
 		});
@@ -206,35 +205,6 @@ public class Parejas extends JFrame {
 		});
 		
 	}
-	
-	/*public void crearParejas (ArrayList<Integer> cartas, JButton btnCarta1, JButton btnCarta2, JButton btnCarta3,
-								JButton btnCarta4 ,JButton btnCarta5 ,JButton btnCarta6) {
-				
-		if(btnCarta1.equals(btnCarta2) && btnCarta1.equals(btnCarta3) && btnCarta1.equals(btnCarta4) 
-				&& btnCarta1.equals(btnCarta5) && btnCarta1.equals(btnCarta6)) {
-			btnCarta1.setBackground(Color.GREEN);
-		}
-		if(btnCarta2.equals(btnCarta1) && btnCarta2.equals(btnCarta3) && btnCarta2.equals(btnCarta4) 
-				&& btnCarta2.equals(btnCarta5) && btnCarta2.equals(btnCarta6)) {
-			btnCarta3.setBackground(Color.GREEN);
-		}
-		if(btnCarta3.equals(btnCarta2) && btnCarta3.equals(btnCarta1) && btnCarta3.equals(btnCarta4) 
-				&& btnCarta3.equals(btnCarta5) && btnCarta3.equals(btnCarta6)) {
-			btnCarta3.setBackground(Color.GREEN);
-		}
-		if(btnCarta4.equals(btnCarta2) && btnCarta4.equals(btnCarta3) && btnCarta4.equals(btnCarta1) 
-				&& btnCarta4.equals(btnCarta5) && btnCarta4.equals(btnCarta6)) {
-			btnCarta4.setBackground(Color.GREEN);
-		}
-		if(btnCarta5.equals(btnCarta2) && btnCarta5.equals(btnCarta3) && btnCarta5.equals(btnCarta4) 
-				&& btnCarta5.equals(btnCarta1) && btnCarta5.equals(btnCarta6)) {
-			btnCarta5.setBackground(Color.GREEN);
-		}
-		if(btnCarta6.equals(btnCarta2) && btnCarta6.equals(btnCarta3) && btnCarta6.equals(btnCarta4) 
-				&& btnCarta6.equals(btnCarta5) && btnCarta6.equals(btnCarta1)) {
-			btnCarta6.setBackground(Color.GREEN);
-		}
-	}*/
 	
 	public void numerarParejas (ArrayList<Integer> cartas, JButton btnCarta1, JButton btnCarta2, JButton btnCarta3,
 			JButton btnCarta4 ,JButton btnCarta5 ,JButton btnCarta6) {
