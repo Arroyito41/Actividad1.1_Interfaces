@@ -148,15 +148,35 @@ public class Parejas extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				
+				
+				
+			
 
 			}
 		});
 		
 		btnCarta2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				
-
+				if (btnCarta2.equals(btnCarta1)) {
+					btnCarta1.setBackground(Color.green);
+					btnCarta2.setBackground(Color.green);
+				} 
+				else if(btnCarta2.equals(btnCarta3)){
+					btnCarta2.setBackground(Color.green);
+					btnCarta3.setBackground(Color.green);
+				}
+				else if(btnCarta1.equals(btnCarta4)){
+					btnCarta1.setBackground(Color.green);
+					btnCarta4.setBackground(Color.green);
+				}
+				else if(btnCarta1.equals(btnCarta5)){
+					btnCarta1.setBackground(Color.green);
+					btnCarta5.setBackground(Color.green);
+				}
+				else if(btnCarta1.equals(btnCarta6)){
+					btnCarta1.setBackground(Color.green);
+					btnCarta6.setBackground(Color.green);
+				}
 			}
 		});
 		
@@ -193,7 +213,7 @@ public class Parejas extends JFrame {
 		});
 		
 	}
-	
+	/*
 	public void crearParejas (ArrayList<Integer> cartas, JButton btnCarta1, JButton btnCarta2, JButton btnCarta3,
 								JButton btnCarta4 ,JButton btnCarta5 ,JButton btnCarta6) {
 				
@@ -222,8 +242,8 @@ public class Parejas extends JFrame {
 			btnCarta6.setBackground(Color.GREEN);
 		}
 		
-			
 	}
+			*/
 	
 	public void numerarParejas (ArrayList<Integer> cartas, JButton btnCarta1, JButton btnCarta2, JButton btnCarta3,
 			JButton btnCarta4 ,JButton btnCarta5 ,JButton btnCarta6) {
