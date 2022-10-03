@@ -8,6 +8,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
+import java.util.ArrayList;
+
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import java.awt.Font;
@@ -70,36 +72,6 @@ public class Parejas extends JFrame {
 		panel1.setLayout(null);
 		panel1.setVisible(false);
 		
-		JPanel panel2 = new JPanel();
-		panel2.setBounds(10, 10, 416, 243);
-		contentPane.add(panel2);
-		panel2.setLayout(null);
-		panel2.setVisible(false);
-		
-		JPanel panel3 = new JPanel();
-		panel3.setBounds(10, 10, 416, 243);
-		contentPane.add(panel3);
-		panel3.setLayout(null);
-		panel3.setVisible(false);
-		
-		JPanel panel4 = new JPanel();
-		panel4.setBounds(10, 10, 416, 243);
-		contentPane.add(panel4);
-		panel4.setLayout(null);
-		panel4.setVisible(false);
-		
-		JPanel panel5 = new JPanel();
-		panel5.setBounds(10, 10, 416, 243);
-		contentPane.add(panel5);
-		panel5.setLayout(null);
-		panel5.setVisible(false);
-		
-		JPanel panel6 = new JPanel();
-		panel6.setBounds(10, 10, 416, 243);
-		contentPane.add(panel6);
-		panel6.setLayout(null);
-		panel6.setVisible(false);
-		
 		JLabel lblNewLabel = new JLabel("DOBLES PAREJAS");
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 16));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -116,12 +88,6 @@ public class Parejas extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				panelIntro.setVisible(false);
 				panel1.setVisible(true);
-				panel2.setVisible(true);
-				panel3.setVisible(true);
-				panel4.setVisible(true);
-				panel5.setVisible(true);
-				panel6.setVisible(true);
-
 			}
 		});
 		btnInicio.setBounds(138, 149, 134, 23);
@@ -137,49 +103,162 @@ public class Parejas extends JFrame {
 		lblGanar.setBounds(138, 112, 133, 26);
 		panelGanar.add(lblGanar);
 		
-		JButton btnCarta1 = new JButton("1");
+		JButton btnCarta1 = new JButton();
 		btnCarta1.setForeground(new Color(231, 236, 237));
-		btnCarta1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});
 		btnCarta1.setBounds(28, 29, 85, 68);
 		panel1.add(btnCarta1);
 		
-		JButton btnCarta2 = new JButton("1");
+		JButton btnCarta2 = new JButton();
 		btnCarta2.setForeground(new Color(231, 236, 237));
 		btnCarta2.setBounds(292, 136, 85, 68);
-		panel2.add(btnCarta2);
+		panel1.add(btnCarta2);
 		
-		JButton btnCarta3 = new JButton("2");
+		JButton btnCarta3 = new JButton();
 		btnCarta3.setForeground(new Color(231, 236, 237));
 		btnCarta3.setBounds(160, 29, 85, 68);
-		panel3.add(btnCarta3);
+		panel1.add(btnCarta3);
 		
-		JButton btnCarta4 = new JButton("2");
+		JButton btnCarta4 = new JButton();
 		btnCarta4.setForeground(new Color(231, 236, 237));
 		btnCarta4.setBounds(160, 136, 85, 68);
-		panel4.add(btnCarta4);
+		panel1.add(btnCarta4);
 		
-		JButton btnCarta5 = new JButton("3");
+		JButton btnCarta5 = new JButton();
 		btnCarta5.setForeground(new Color(231, 236, 237));
 		btnCarta5.setBounds(28, 136, 85, 68);
-		panel5.add(btnCarta5);
+		panel1.add(btnCarta5);
 		
-		JButton btnCarta6 = new JButton("3");
+		JButton btnCarta6 = new JButton();
 		btnCarta6.setForeground(new Color(231, 236, 237));
 		btnCarta6.setBounds(292, 29, 85, 68);
-		panel6.add(btnCarta6);
+		panel1.add(btnCarta6);
 
-	}
-		/*public void botonesParejas (JButton btnCarta1, JButton btnCarta2, JButton btnCarta3, JButton btnCarta4, 
-									JButton btnCarta5, JButton btnCarta6, JPanel panelGanar, JPanel panelPerder) {
-			
-			if(btnCarta1.getText().equals(btnCarta2)) {
-				panelGanar.setVisible(true);
+		ArrayList<Integer> cartas = new ArrayList<>();
+		
+		cartas.add(1);
+		cartas.add(2);
+		cartas.add(3);
+		cartas.add(1);
+		cartas.add(2);
+		cartas.add(3);
+		
+		numerarParejas(cartas, btnCarta1, btnCarta2, btnCarta3, btnCarta4, btnCarta5, btnCarta6);
+		
+		btnCarta1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				crearParejas(cartas, btnCarta1, btnCarta2, btnCarta3, btnCarta4, btnCarta5, btnCarta6);
+
 			}
+		});
+		
+		btnCarta2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				crearParejas(cartas, btnCarta1, btnCarta2, btnCarta3, btnCarta4, btnCarta5, btnCarta6);
+
+			}
+		});
+		
+		btnCarta3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				crearParejas(cartas, btnCarta1, btnCarta2, btnCarta3, btnCarta4, btnCarta5, btnCarta6);
+
+			}
+		});
+		
+		btnCarta4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				crearParejas(cartas, btnCarta1, btnCarta2, btnCarta3, btnCarta4, btnCarta5, btnCarta6);
+
+			}
+		});
+		
+		btnCarta5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				crearParejas(cartas, btnCarta1, btnCarta2, btnCarta3, btnCarta4, btnCarta5, btnCarta6);
+
+			}
+		});
+		
+		btnCarta6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
 			
+				crearParejas(cartas, btnCarta1, btnCarta2, btnCarta3, btnCarta4, btnCarta5, btnCarta6);
+
+			}
+		});
+		
+	}
+	
+	public void crearParejas (ArrayList<Integer> cartas, JButton btnCarta1, JButton btnCarta2, JButton btnCarta3,
+								JButton btnCarta4 ,JButton btnCarta5 ,JButton btnCarta6) {
+				
+		if(btnCarta1.equals(btnCarta2) && btnCarta1.equals(btnCarta3) && btnCarta1.equals(btnCarta4) 
+				&& btnCarta1.equals(btnCarta5) && btnCarta1.equals(btnCarta6)) {
+			btnCarta1.setBackground(Color.GREEN);
+		}
+		if(btnCarta2.equals(btnCarta1) && btnCarta2.equals(btnCarta3) && btnCarta2.equals(btnCarta4) 
+				&& btnCarta2.equals(btnCarta5) && btnCarta2.equals(btnCarta6)) {
+			btnCarta3.setBackground(Color.GREEN);
+		}
+		if(btnCarta3.equals(btnCarta2) && btnCarta3.equals(btnCarta1) && btnCarta3.equals(btnCarta4) 
+				&& btnCarta3.equals(btnCarta5) && btnCarta3.equals(btnCarta6)) {
+			btnCarta3.setBackground(Color.GREEN);
+		}
+		if(btnCarta4.equals(btnCarta2) && btnCarta4.equals(btnCarta3) && btnCarta4.equals(btnCarta1) 
+				&& btnCarta4.equals(btnCarta5) && btnCarta4.equals(btnCarta6)) {
+			btnCarta4.setBackground(Color.GREEN);
+		}
+		if(btnCarta5.equals(btnCarta2) && btnCarta5.equals(btnCarta3) && btnCarta5.equals(btnCarta4) 
+				&& btnCarta5.equals(btnCarta1) && btnCarta5.equals(btnCarta6)) {
+			btnCarta5.setBackground(Color.GREEN);
+		}
+		if(btnCarta6.equals(btnCarta2) && btnCarta6.equals(btnCarta3) && btnCarta6.equals(btnCarta4) 
+				&& btnCarta6.equals(btnCarta5) && btnCarta6.equals(btnCarta1)) {
+			btnCarta6.setBackground(Color.GREEN);
+		}
+		
 			
-		}*/
+	}
+	
+	public void numerarParejas (ArrayList<Integer> cartas, JButton btnCarta1, JButton btnCarta2, JButton btnCarta3,
+			JButton btnCarta4 ,JButton btnCarta5 ,JButton btnCarta6) {
+		
+		int aleatorio = 0, num1, num2, num3, num4, num5, num6;
+		
+			aleatorio = (int)(Math.random()*cartas.size());
+			num1 = cartas.get(aleatorio);
+			cartas.remove(aleatorio);
+			btnCarta1.setText(String.valueOf(num1));
+			
+			aleatorio = (int)(Math.random()*cartas.size());
+			num2 = cartas.get(aleatorio);
+			cartas.remove(aleatorio);
+			btnCarta2.setText(String.valueOf(num2));
+			
+			aleatorio = (int)(Math.random()*cartas.size());
+			num3 = cartas.get(aleatorio);
+			cartas.remove(aleatorio);
+			btnCarta3.setText(String.valueOf(num3));
+			
+			aleatorio = (int)(Math.random()*cartas.size());
+			num4 = cartas.get(aleatorio);
+			cartas.remove(aleatorio);
+			btnCarta4.setText(String.valueOf(num4));
+			
+			aleatorio = (int)(Math.random()*cartas.size());
+			num5 = cartas.get(aleatorio);
+			cartas.remove(aleatorio);
+			btnCarta5.setText(String.valueOf(num5));
+			
+			aleatorio = (int)(Math.random()*cartas.size());
+			num6 = cartas.get(aleatorio);
+			cartas.remove(aleatorio);
+			btnCarta6.setText(String.valueOf(num6));
+		
+	}
 }
