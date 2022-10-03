@@ -147,7 +147,6 @@ public class Parejas extends JFrame {
 		btnCarta1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				
 
 			}
 		});
@@ -155,14 +154,31 @@ public class Parejas extends JFrame {
 		btnCarta2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				
-
+				if (btnCarta2.equals(btnCarta1)) {
+					btnCarta1.setBackground(Color.green);
+					btnCarta2.setBackground(Color.green);
+				} 
+				else if(btnCarta2.equals(btnCarta3)){
+					btnCarta2.setBackground(Color.green);
+					btnCarta3.setBackground(Color.green);
+				}
+				else if(btnCarta1.equals(btnCarta4)){
+					btnCarta1.setBackground(Color.green);
+					btnCarta4.setBackground(Color.green);
+				}
+				else if(btnCarta1.equals(btnCarta5)){
+					btnCarta1.setBackground(Color.green);
+					btnCarta5.setBackground(Color.green);
+				}
+				else if(btnCarta1.equals(btnCarta6)){
+					btnCarta1.setBackground(Color.green);
+					btnCarta6.setBackground(Color.green);
+				}
 			}
 		});
 		
 		btnCarta3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
 				
 
 			}
@@ -171,14 +187,12 @@ public class Parejas extends JFrame {
 		btnCarta4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				
 
 			}
 		});
 		
 		btnCarta5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
 				
 
 			}
@@ -187,14 +201,13 @@ public class Parejas extends JFrame {
 		btnCarta6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			
-				
 
 			}
 		});
 		
 	}
 	
-	public void crearParejas (ArrayList<Integer> cartas, JButton btnCarta1, JButton btnCarta2, JButton btnCarta3,
+	/*public void crearParejas (ArrayList<Integer> cartas, JButton btnCarta1, JButton btnCarta2, JButton btnCarta3,
 								JButton btnCarta4 ,JButton btnCarta5 ,JButton btnCarta6) {
 				
 		if(btnCarta1.equals(btnCarta2) && btnCarta1.equals(btnCarta3) && btnCarta1.equals(btnCarta4) 
@@ -221,9 +234,7 @@ public class Parejas extends JFrame {
 				&& btnCarta6.equals(btnCarta5) && btnCarta6.equals(btnCarta1)) {
 			btnCarta6.setBackground(Color.GREEN);
 		}
-		
-			
-	}
+	}*/
 	
 	public void numerarParejas (ArrayList<Integer> cartas, JButton btnCarta1, JButton btnCarta2, JButton btnCarta3,
 			JButton btnCarta4 ,JButton btnCarta5 ,JButton btnCarta6) {
