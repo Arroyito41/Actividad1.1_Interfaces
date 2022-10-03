@@ -147,7 +147,7 @@ public class Parejas extends JFrame {
 		btnCarta1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				crearParejas(cartas, btnCarta1, btnCarta2, btnCarta3, btnCarta4, btnCarta5, btnCarta6);
+				
 
 			}
 		});
@@ -155,7 +155,7 @@ public class Parejas extends JFrame {
 		btnCarta2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				crearParejas(cartas, btnCarta1, btnCarta2, btnCarta3, btnCarta4, btnCarta5, btnCarta6);
+				
 
 			}
 		});
@@ -163,7 +163,7 @@ public class Parejas extends JFrame {
 		btnCarta3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				crearParejas(cartas, btnCarta1, btnCarta2, btnCarta3, btnCarta4, btnCarta5, btnCarta6);
+				
 
 			}
 		});
@@ -171,7 +171,7 @@ public class Parejas extends JFrame {
 		btnCarta4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				crearParejas(cartas, btnCarta1, btnCarta2, btnCarta3, btnCarta4, btnCarta5, btnCarta6);
+				
 
 			}
 		});
@@ -179,7 +179,7 @@ public class Parejas extends JFrame {
 		btnCarta5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				crearParejas(cartas, btnCarta1, btnCarta2, btnCarta3, btnCarta4, btnCarta5, btnCarta6);
+				
 
 			}
 		});
@@ -187,7 +187,7 @@ public class Parejas extends JFrame {
 		btnCarta6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			
-				crearParejas(cartas, btnCarta1, btnCarta2, btnCarta3, btnCarta4, btnCarta5, btnCarta6);
+				
 
 			}
 		});
