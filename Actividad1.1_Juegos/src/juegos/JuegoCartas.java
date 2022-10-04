@@ -51,7 +51,7 @@ public class JuegoCartas extends JFrame {
 		panelPrincipal.setLayout(null);
 		
 		JLabel lblSumaBot = new JLabel("");
-		lblSumaBot.setBounds(305, 28, 89, 46);
+		lblSumaBot.setBounds(319, 29, 89, 46);
 		panelPrincipal.add(lblSumaBot);
 		
 		JButton btnCarta1 = new JButton("");
@@ -62,36 +62,48 @@ public class JuegoCartas extends JFrame {
 		
 		JButton btnCarta2 = new JButton("");
 		btnCarta2.setBackground(new Color(128, 128, 255));
-		btnCarta2.setBounds(168, 161, 66, 89);
+		btnCarta2.setBounds(130, 161, 66, 89);
 		panelPrincipal.add(btnCarta2);
-		
-		JButton btnCarta3 = new JButton("");
-		btnCarta3.setBackground(new Color(0, 255, 255));
-		btnCarta3.setBounds(39, 11, 66, 89);
-		panelPrincipal.add(btnCarta3);
 		
 		JButton btnCarta4 = new JButton("");
 		btnCarta4.setBackground(new Color(0, 255, 255));
-		btnCarta4.setBounds(168, 11, 66, 89);
+		btnCarta4.setBounds(39, 11, 66, 89);
 		panelPrincipal.add(btnCarta4);
 		
+		JButton btnCarta5 = new JButton("");
+		btnCarta5.setBackground(new Color(0, 255, 255));
+		btnCarta5.setBounds(130, 11, 66, 89);
+		panelPrincipal.add(btnCarta5);
+		
 		JButton btnJugar = new JButton("Jugar");
-		btnJugar.setBounds(97, 111, 89, 23);
+		btnJugar.setBounds(49, 115, 89, 23);
 		panelPrincipal.add(btnJugar);
 		
 		JLabel lblSuma = new JLabel("");
-		lblSuma.setBounds(305, 182, 89, 46);
+		lblSuma.setBounds(319, 183, 89, 46);
 		panelPrincipal.add(lblSuma);
 		
-		JLabel lblGanar = new JLabel("Has ganado");
-		lblGanar.setHorizontalAlignment(SwingConstants.CENTER);
-		lblGanar.setBounds(324, 103, 70, 31);
-		panelPrincipal.add(lblGanar);
+		JButton btnCarta6 = new JButton("");
+		btnCarta6.setBackground(Color.CYAN);
+		btnCarta6.setBounds(216, 11, 66, 89);
+		panelPrincipal.add(btnCarta6);
 		
-		JLabel lblPerder = new JLabel("Has perdido");
-		lblPerder.setHorizontalAlignment(SwingConstants.CENTER);
-		lblPerder.setBounds(324, 145, 70, 31);
-		panelPrincipal.add(lblPerder);
+		JButton btnCarta3 = new JButton("");
+		btnCarta3.setBackground(new Color(128, 128, 255));
+		btnCarta3.setBounds(216, 161, 66, 89);
+		panelPrincipal.add(btnCarta3);
+		
+		JButton btnPlantar = new JButton("Plantarse");
+		btnPlantar.setBounds(161, 116, 89, 23);
+		panelPrincipal.add(btnPlantar);
+		
+		JButton btnContinuar = new JButton("Continuar");
+		btnContinuar.setBounds(49, 116, 89, 23);
+		panelPrincipal.add(btnContinuar);
+		
+		JButton btnContinuar2 = new JButton("Continuar");
+		btnContinuar2.setBounds(49, 116, 89, 23);
+		panelPrincipal.add(btnContinuar2);
 		
 		JPanel panelInstrucciones = new JPanel();
 		panelInstrucciones.setBounds(0, 0, 434, 261);
@@ -125,8 +137,6 @@ public class JuegoCartas extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				panelPrincipal.setVisible(true);
 				panelInstrucciones.setVisible(false);
-				lblGanar.setVisible(false);
-				lblPerder.setVisible(false);
 			}
 		});
 		
@@ -134,33 +144,14 @@ public class JuegoCartas extends JFrame {
 		
 		btnJugar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int random1=(int)(1+Math.random()*10);
-				int random2=(int)(1+Math.random()*10);
-				int random3=(int)(1+Math.random()*10);
-				int random4=(int)(1+Math.random()*10);
-				int resultado1;
-				int resultado2;
+				int aleatorio1;
+				int aleatorio2;
+				aleatorio1=(int)(1+Math.random()*21);
+				aleatorio2=(int)(1+Math.random()*21);
 				
-				resultado1=random1+random2;
-				resultado2=random3+random4;
-				
-				btnCarta1.setText(String.valueOf(random1));
-				btnCarta2.setText(String.valueOf(random2));
-				btnCarta3.setText(String.valueOf(random3));
-				btnCarta4.setText(String.valueOf(random4));
-				
-				lblSuma.setText(String.valueOf(resultado1));
-				lblSumaBot.setText(String.valueOf(resultado2));
-				
-				if (resultado1>resultado2) {
-					lblGanar.setVisible(true);
-					lblPerder.setVisible(false);
-				}else {
-					lblPerder.setVisible(true);
-					lblGanar.setVisible(false);
-				}
 			}
 		});
+		
 		
 	}
 }
