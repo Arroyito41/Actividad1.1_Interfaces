@@ -381,6 +381,9 @@ public class JuegoCaminos extends JFrame {
 					panelC1.setVisible(false);
 					panelC2.setVisible(false);
 					panelC3.setVisible(false);
+					
+					JuegoCartas abrir = new JuegoCartas();
+					abrir.setVisible(true);
 				} else {
 					panelInstrucciones.setVisible(false);
 					panelGanar.setVisible(false);
@@ -392,6 +395,8 @@ public class JuegoCaminos extends JFrame {
 				
 			}
 		});	
+		
+		
 	}
 }
 
