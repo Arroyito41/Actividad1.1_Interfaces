@@ -41,7 +41,6 @@ public class Parejas extends JFrame {
 	 * Create the frame.
 	 */
 	public Parejas() {
-		int contador = 0;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -88,6 +87,12 @@ public class Parejas extends JFrame {
 		btnInicio.setBounds(138, 149, 134, 23);
 		panelIntro.add(btnInicio);
 		
+		JLabel lblParejas = new JLabel("JUEGO DE LAS PAREJAS");
+		lblParejas.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblParejas.setHorizontalAlignment(SwingConstants.CENTER);
+		lblParejas.setBounds(64, 35, 301, 38);
+		panelIntro.add(lblParejas);
+		
 		JLabel lblContador = new JLabel("1");
 		lblContador.setBounds(30, 11, 45, 13);
 		panel1.add(lblContador);
@@ -110,31 +115,37 @@ public class Parejas extends JFrame {
 		panelGanar.add(lblGanar);
 		
 		JButton btnCarta1 = new JButton();
+		btnCarta1.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		btnCarta1.setForeground(new Color(231, 236, 237));
 		btnCarta1.setBounds(28, 29, 85, 68);
 		panel1.add(btnCarta1);
 		
 		JButton btnCarta2 = new JButton();
+		btnCarta2.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		btnCarta2.setForeground(new Color(231, 236, 237));
 		btnCarta2.setBounds(292, 136, 85, 68);
 		panel1.add(btnCarta2);
 		
 		JButton btnCarta3 = new JButton();
+		btnCarta3.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		btnCarta3.setForeground(new Color(231, 236, 237));
 		btnCarta3.setBounds(160, 29, 85, 68);
 		panel1.add(btnCarta3);
 		
 		JButton btnCarta4 = new JButton();
+		btnCarta4.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		btnCarta4.setForeground(new Color(231, 236, 237));
 		btnCarta4.setBounds(160, 136, 85, 68);
 		panel1.add(btnCarta4);
 		
 		JButton btnCarta5 = new JButton();
+		btnCarta5.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		btnCarta5.setForeground(new Color(231, 236, 237));
 		btnCarta5.setBounds(28, 136, 85, 68);
 		panel1.add(btnCarta5);
 		
 		JButton btnCarta6 = new JButton();
+		btnCarta6.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		btnCarta6.setForeground(new Color(231, 236, 237));
 		btnCarta6.setBounds(292, 29, 85, 68);
 		panel1.add(btnCarta6);
@@ -153,47 +164,139 @@ public class Parejas extends JFrame {
 		btnCarta1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
+				if(btnCarta1.getText().equals("1")) {
+					btnCarta1.setBackground(Color.GREEN);
+				}
+				if(btnCarta1.getText().equals("2")) {
+					btnCarta1.setBackground(Color.CYAN);
+				}
+				if(btnCarta1.getText().equals("3")) {
+					btnCarta1.setBackground(Color.PINK);
+				}
 				
-			}
+				compararBotones(panelGanar, panelPerder, panel1, lblContador, btnCarta1);
+			} 
+
+			
 		});
 		
 		btnCarta2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
+				if(btnCarta2.getText().equals("1")) {
+					btnCarta2.setBackground(Color.GREEN);
+				}
+				if(btnCarta2.getText().equals("2")) {
+					btnCarta2.setBackground(Color.CYAN);
+				}
+				if(btnCarta2.getText().equals("3")) {
+					btnCarta2.setBackground(Color.PINK);
+				}
 				
+				compararBotones(panelGanar, panelPerder, panel1, lblContador, btnCarta2);
 			}
 		});
 		
 		btnCarta3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				
-
+				if(btnCarta3.getText().equals("1")) {
+					btnCarta3.setBackground(Color.GREEN);
+				}
+				if(btnCarta3.getText().equals("2")) {
+					btnCarta3.setBackground(Color.CYAN);
+				}
+				if(btnCarta3.getText().equals("3")) {
+					btnCarta3.setBackground(Color.PINK);
+				}			
 			}
 		});
 		
 		btnCarta4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				
+				if(btnCarta4.getText().equals("1")) {
+					btnCarta4.setBackground(Color.GREEN);
+				}
+				if(btnCarta4.getText().equals("2")) {
+					btnCarta4.setBackground(Color.CYAN);
+				}
+				if(btnCarta4.getText().equals("3")) {
+					btnCarta4.setBackground(Color.PINK);
+				}			
 			}
 		});
 		
 		btnCarta5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				
+				if(btnCarta5.getText().equals("1")) {
+					btnCarta5.setBackground(Color.GREEN);
+				}
+				if(btnCarta5.getText().equals("2")) {
+					btnCarta5.setBackground(Color.CYAN);
+				}
+				if(btnCarta5.getText().equals("3")) {
+					btnCarta5.setBackground(Color.PINK);
+				}			
 			}
 		});
 		
 		btnCarta6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				
+				if(btnCarta6.getText().equals("1")) {
+					btnCarta6.setBackground(Color.GREEN);
+				}
+				if(btnCarta6.getText().equals("2")) {
+					btnCarta6.setBackground(Color.CYAN);
+				}
+				if(btnCarta6.getText().equals("3")) {
+					btnCarta6.setBackground(Color.PINK);
+				}			
 			}
 		});
 		
 	}
+	
+	public void compararBotones(JPanel panelGanar, JPanel panelPerder, JPanel panel1, JLabel lblContador, JButton boton) {
+		
+		int n1 = 0;
+		
+		n1 += Integer.valueOf(lblContador.getText());
+		
+		if(n1%2==0){
+			if(boton.getText().equals(boton.getText())) {
+				panelGanar.setVisible(true);
+			}
+			else {
+				panelPerder.setVisible(true);
+				panel1.setVisible(false);
+			}
+		}
+		n1= Integer.parseInt(lblContador.getText());
+		n1++;
+		
+	}
+	
+	/*public void tiradas (JPanel panelPerder, JPanel panel1, JLabel lblContador, JButton boton) {
+		int n1=0;
+		
+		n1 += Integer.valueOf(lblContador.getText());
+		if(n1%2!= 0) {
+			boton.setBackground(Color.GREEN);
+		}
+		else if(n1%2==0){
+			boton.setBackground(Color.RED);
+			panelPerder.setVisible(true);
+			panel1.setVisible(false);
+		}
+		n1= Integer.parseInt(lblContador.getText());
+
+		n1++;
+	}*/
+	
+	
 	
 	public void numerarParejas (ArrayList<Integer> cartas, JButton btnCarta1, JButton btnCarta2, JButton btnCarta3,
 			JButton btnCarta4 ,JButton btnCarta5 ,JButton btnCarta6) {
@@ -229,6 +332,6 @@ public class Parejas extends JFrame {
 			num6 = cartas.get(aleatorio);
 			cartas.remove(aleatorio);
 			btnCarta6.setText(String.valueOf(num6));
-		
+	
 	}
 }
