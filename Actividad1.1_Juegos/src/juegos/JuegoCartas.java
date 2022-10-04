@@ -52,7 +52,8 @@ public class JuegoCartas extends JFrame {
 		panelPrincipal.setLayout(null);
 		
 		JPanel panelDerrota = new JPanel();
-		panelDerrota.setBounds(0, 0, 10, 10);
+		panelDerrota.setBackground(new Color(0, 0, 0));
+		panelDerrota.setBounds(0, 0, 434, 261);
 		contentPane.add(panelDerrota);
 		panelDerrota.setVisible(false);
 		
@@ -89,21 +90,24 @@ public class JuegoCartas extends JFrame {
 		panelPrincipal.add(lblRes2);
 		
 		JLabel lblRes1 = new JLabel("");
-		lblRes1.setBounds(249, 61, 45, 13);
+		lblRes1.setBounds(223, 61, 45, 13);
 		panelPrincipal.add(lblRes1);
 		
 		JLabel lblDerrota = new JLabel("Has Perdido");
-		lblDerrota.setBounds(138, 30, 130, 31);
+		lblDerrota.setBounds(84, 28, 275, 120);
 		panelDerrota.add(lblDerrota);
+		lblDerrota.setForeground(new Color(255, 255, 0));
 		lblDerrota.setHorizontalAlignment(SwingConstants.CENTER);
 		lblDerrota.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		panelDerrota.setLayout(null);
 		
 		JLabel lblVictoria = new JLabel("Has Ganado");
+		lblVictoria.setBounds(94, 51, 264, 130);
+		panelVictoria.add(lblVictoria);
 		lblVictoria.setHorizontalAlignment(SwingConstants.CENTER);
 		lblVictoria.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		lblVictoria.setBounds(55, 12, 282, 89);
-		panelVictoria.add(lblVictoria);
+		panelDerrota.setLayout(null);
+		panelVictoria.setBackground(new Color(128, 255, 128));
+		panelVictoria.setLayout(null);
 		panelVictoria.setVisible(false);
 		
 		panelVictoria.setBounds(0, 0, 445, 261);
@@ -111,25 +115,27 @@ public class JuegoCartas extends JFrame {
 		btnPlantarse.setVisible(false);
 		
 		JPanel panelInstrucciones = new JPanel();
+		panelInstrucciones.setBackground(new Color(128, 255, 255));
 		panelInstrucciones.setBounds(0, 0, 434, 261);
 		contentPane.add(panelInstrucciones);
 		panelInstrucciones.setLayout(null);
 		
-		JLabel lblTitulo = new JLabel("Puntuación mas alta");
+		JLabel lblTitulo = new JLabel("BLACK JACK");
 		lblTitulo.setFont(new Font("Tahoma", Font.BOLD, 20));
 		lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTitulo.setBounds(105, 23, 238, 30);
 		panelInstrucciones.add(lblTitulo);
 		
 		JLabel lblInstrucciones1 = new JLabel("Esta pruba consiste en la suma de las dos cartas");
+		lblInstrucciones1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblInstrucciones1.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblInstrucciones1.setBounds(34, 80, 327, 37);
+		lblInstrucciones1.setBounds(34, 80, 364, 37);
 		panelInstrucciones.add(lblInstrucciones1);
 		
-		JLabel lblInstrucciones2 = new JLabel("el que más sume gana la prueba");
-		lblInstrucciones2.setHorizontalAlignment(SwingConstants.LEFT);
+		JLabel lblInstrucciones2 = new JLabel("el que mas sume gana la prueba");
+		lblInstrucciones2.setHorizontalAlignment(SwingConstants.CENTER);
 		lblInstrucciones2.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblInstrucciones2.setBounds(34, 112, 327, 37);
+		lblInstrucciones2.setBounds(34, 112, 364, 37);
 		panelInstrucciones.add(lblInstrucciones2);
 		
 		JButton btnEmpezar = new JButton("Empezar");
