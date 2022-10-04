@@ -147,31 +147,71 @@ public class Parejas extends JFrame {
 		btnCarta1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
+				if (btnCarta1.getText().equals(btnCarta2.getText())) {
+					btnCarta1.setBackground(Color.green);
+				} 
+				else {
+					btnCarta1.setBackground(Color.red);
+				}
+				if(btnCarta1.getText().equals(btnCarta3.getText())){
+					btnCarta1.setBackground(Color.green);
+				}
+				else {
+					btnCarta1.setBackground(Color.red);
+				}
+				if(btnCarta1.getText().equals(btnCarta4.getText())){
+					btnCarta1.setBackground(Color.green);
+				}
+				else {
+					btnCarta1.setBackground(Color.red);
+				}
+				if(btnCarta1.getText().equals(btnCarta5.getText())){
+					btnCarta1.setBackground(Color.green);
+				}
+				else {
+					btnCarta1.setBackground(Color.red);
+				}
+				if(btnCarta1.getText().equals(btnCarta6.getText())){
+					btnCarta1.setBackground(Color.green);
+				}
+				else {
+					btnCarta1.setBackground(Color.red);
+				}
 			}
 		});
 		
 		btnCarta2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				if (btnCarta2.equals(btnCarta1)) {
-					btnCarta1.setBackground(Color.green);
+				if (btnCarta2.getText().equals(btnCarta1.getText())) {
 					btnCarta2.setBackground(Color.green);
 				} 
-				else if(btnCarta2.equals(btnCarta3)){
+				else {
+					btnCarta2.setBackground(Color.red);
+				}
+				if(btnCarta2.getText().equals(btnCarta3.getText())){
 					btnCarta2.setBackground(Color.green);
-					btnCarta3.setBackground(Color.green);
 				}
-				else if(btnCarta1.equals(btnCarta4)){
-					btnCarta1.setBackground(Color.green);
-					btnCarta4.setBackground(Color.green);
+				else {
+					btnCarta2.setBackground(Color.red);
 				}
-				else if(btnCarta1.equals(btnCarta5)){
-					btnCarta1.setBackground(Color.green);
-					btnCarta5.setBackground(Color.green);
+				if(btnCarta2.getText().equals(btnCarta4.getText())){
+					btnCarta2.setBackground(Color.green);
 				}
-				else if(btnCarta1.equals(btnCarta6)){
-					btnCarta1.setBackground(Color.green);
-					btnCarta6.setBackground(Color.green);
+				else {
+					btnCarta2.setBackground(Color.red);
+				}
+				if(btnCarta2.getText().equals(btnCarta5.getText())){
+					btnCarta2.setBackground(Color.green);
+				}
+				else {
+					btnCarta2.setBackground(Color.red);
+				}
+				if(btnCarta2.getText().equals(btnCarta6.getText())){
+					btnCarta2.setBackground(Color.green);
+				}
+				else {
+					btnCarta2.setBackground(Color.red);
 				}
 			}
 		});
@@ -179,28 +219,145 @@ public class Parejas extends JFrame {
 		btnCarta3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
+				if (btnCarta3.getText().equals(btnCarta1.getText())) {
+					btnCarta3.setBackground(Color.green);
+				} 
+				else {
+					btnCarta3.setBackground(Color.red);
+				}
+				if(btnCarta3.getText().equals(btnCarta2.getText())){
+					btnCarta3.setBackground(Color.green);
+				}
+				else {
+					btnCarta3.setBackground(Color.red);
+				}
+				if(btnCarta3.getText().equals(btnCarta4.getText())){
+					btnCarta3.setBackground(Color.green);
+				}
+				else {
+					btnCarta3.setBackground(Color.red);
+				}
+				if(btnCarta3.getText().equals(btnCarta5.getText())){
+					btnCarta3.setBackground(Color.green);
+				}
+				else {
+					btnCarta3.setBackground(Color.red);
+				}
+				if(btnCarta3.getText().equals(btnCarta6.getText())){
+					btnCarta3.setBackground(Color.green);
+				}
+				else {
+					btnCarta3.setBackground(Color.red);
+				}
 
 			}
 		});
 		
 		btnCarta4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
 
+				if (btnCarta4.getText().equals(btnCarta1.getText())) {
+					btnCarta4.setBackground(Color.green);
+				} 
+				else {
+					btnCarta4.setBackground(Color.red);
+				}
+				if(btnCarta4.getText().equals(btnCarta3.getText())){
+					btnCarta4.setBackground(Color.green);
+				}
+				else {
+					btnCarta4.setBackground(Color.red);
+				}
+				if(btnCarta4.getText().equals(btnCarta2.getText())){
+					btnCarta4.setBackground(Color.green);
+				}
+				else {
+					btnCarta4.setBackground(Color.red);
+				}
+				if(btnCarta4.getText().equals(btnCarta5.getText())){
+					btnCarta4.setBackground(Color.green);
+				}
+				else {
+					btnCarta4.setBackground(Color.red);
+				}
+				if(btnCarta4.getText().equals(btnCarta6.getText())){
+					btnCarta4.setBackground(Color.green);
+				}
+				else {
+					btnCarta4.setBackground(Color.red);
+				}
 			}
 		});
 		
 		btnCarta5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
 
+				if (btnCarta5.getText().equals(btnCarta1.getText())) {
+					btnCarta5.setBackground(Color.green);
+				} 
+				else {
+					btnCarta5.setBackground(Color.red);
+				}
+				if(btnCarta5.getText().equals(btnCarta3.getText())){
+					btnCarta5.setBackground(Color.green);
+				}
+				else {
+					btnCarta5.setBackground(Color.red);
+				}
+				if(btnCarta5.getText().equals(btnCarta2.getText())){
+					btnCarta5.setBackground(Color.green);
+				}
+				else {
+					btnCarta5.setBackground(Color.red);
+				}
+				if(btnCarta5.getText().equals(btnCarta4.getText())){
+					btnCarta5.setBackground(Color.green);
+				}
+				else {
+					btnCarta5.setBackground(Color.red);
+				}
+				if(btnCarta5.getText().equals(btnCarta6.getText())){
+					btnCarta5.setBackground(Color.green);
+				}
+				else {
+					btnCarta5.setBackground(Color.red);
+				}
 			}
 		});
 		
 		btnCarta6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			
 
+				if (btnCarta6.getText().equals(btnCarta1.getText())) {
+					btnCarta6.setBackground(Color.green);
+				} 
+				else {
+					btnCarta6.setBackground(Color.red);
+				}
+				if(btnCarta6.getText().equals(btnCarta3.getText())){
+					btnCarta6.setBackground(Color.green);
+				}
+				else {
+					btnCarta6.setBackground(Color.red);
+				}
+				if(btnCarta6.getText().equals(btnCarta2.getText())){
+					btnCarta6.setBackground(Color.green);
+				}
+				else {
+					btnCarta6.setBackground(Color.red);
+				}
+				if(btnCarta6.getText().equals(btnCarta4.getText())){
+					btnCarta6.setBackground(Color.green);
+				}
+				else {
+					btnCarta6.setBackground(Color.red);
+				}
+				if(btnCarta6.getText().equals(btnCarta5.getText())){
+					btnCarta6.setBackground(Color.green);
+				}
+				else {
+					btnCarta6.setBackground(Color.red);
+				}
 			}
 		});
 		
