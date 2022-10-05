@@ -19,6 +19,7 @@ public class JuegoCartas extends JFrame {
 	private JPanel contentPane;
 	private final JPanel panelPrincipal = new JPanel();
 	private final JPanel panelVictoria = new JPanel();
+	private final JPanel panelEmpate = new JPanel();
 
 	/**
 	 * Launch the application.
@@ -40,6 +41,7 @@ public class JuegoCartas extends JFrame {
 	 * Create the frame.
 	 */
 	public JuegoCartas() {
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -93,6 +95,17 @@ public class JuegoCartas extends JFrame {
 		JLabel lblRes1 = new JLabel("");
 		lblRes1.setBounds(223, 61, 45, 13);
 		panelPrincipal.add(lblRes1);
+		
+		panelEmpate.setBounds(0, 0, 434, 261);
+		contentPane.add(panelEmpate);
+		panelEmpate.setLayout(null);
+		panelEmpate.setVisible(false);
+		
+		JLabel lblEmpate = new JLabel("EMPATE");
+		lblEmpate.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lblEmpate.setHorizontalAlignment(SwingConstants.CENTER);
+		lblEmpate.setBounds(103, 77, 188, 85);
+		panelEmpate.add(lblEmpate);
 
 		JLabel lblDerrota = new JLabel("Has Perdido");
 		lblDerrota.setBounds(84, 28, 275, 120);
@@ -192,7 +205,7 @@ public class JuegoCartas extends JFrame {
 							lblRes1.setText(String.valueOf(res1));
 						}
 						if (res1 == res2) {
-
+							panelEmpate.setVisible(true);
 						} else if ((res1 > res2) && (res1 <= 21)) {
 							panelDerrota.setVisible(true);
 							panelPrincipal.setVisible(false);
