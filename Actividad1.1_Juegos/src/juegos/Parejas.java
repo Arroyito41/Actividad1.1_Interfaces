@@ -173,7 +173,29 @@ public class Parejas extends JFrame {
 					btnCarta1.setBackground(Color.PINK);
 				}
 
-				compararBotones(panelGanar, panelPerder, panel1, lblContador, btnCarta1);
+				int contador=Integer.valueOf(lblContador.getText());
+
+				if (contador % 2 != 0) {
+					contador++;
+					lblContador.setText(String.valueOf(contador));
+					
+					lblComparar.setText(btnCarta1.getText());
+				}
+				else if(contador%2==0) {
+					contador++;
+					lblContador.setText(String.valueOf(contador));
+					
+					if(!(btnCarta1.getText().equals(lblComparar.getText()))) {
+						panelPerder.setVisible(true);
+						panel1.setVisible(false);
+					}
+
+				}
+				
+				if(contador==6) {
+					panelGanar.setVisible(true);
+					panel1.setVisible(false);
+				}
 			}
 
 		});
@@ -190,8 +212,30 @@ public class Parejas extends JFrame {
 				if (btnCarta2.getText().equals("3")) {
 					btnCarta2.setBackground(Color.PINK);
 				}
+				
+				int contador=Integer.valueOf(lblContador.getText());
 
-				compararBotones(panelGanar, panelPerder, panel1, lblContador, btnCarta2);
+				if (contador % 2 != 0) {
+					contador++;
+					lblContador.setText(String.valueOf(contador));
+					
+					lblComparar.setText(btnCarta2.getText());
+				}
+				else if(contador%2==0) {
+					contador++;
+					lblContador.setText(String.valueOf(contador));
+					
+					if(!(btnCarta2.getText().equals(lblComparar.getText()))) {
+						panelPerder.setVisible(true);
+						panel1.setVisible(false);
+					}
+
+				}
+				
+				if(contador==6) {
+					panelGanar.setVisible(true);
+					panel1.setVisible(false);
+				}
 			}
 		});
 
@@ -206,6 +250,29 @@ public class Parejas extends JFrame {
 				}
 				if (btnCarta3.getText().equals("3")) {
 					btnCarta3.setBackground(Color.PINK);
+				}
+				
+				int contador=Integer.valueOf(lblContador.getText());
+
+				if (contador % 2 != 0) {
+					contador++;
+					lblContador.setText(String.valueOf(contador));
+					
+					lblComparar.setText(btnCarta3.getText());
+				}
+				else if(contador%2==0) {
+					contador++;
+					lblContador.setText(String.valueOf(contador));
+					
+					if(!(btnCarta3.getText().equals(lblComparar.getText()))) {
+						panelPerder.setVisible(true);
+						panel1.setVisible(false);
+					}
+
+				}
+				if(contador==6) {
+					panelGanar.setVisible(true);
+					panel1.setVisible(false);
 				}
 			}
 		});
@@ -222,6 +289,30 @@ public class Parejas extends JFrame {
 				if (btnCarta4.getText().equals("3")) {
 					btnCarta4.setBackground(Color.PINK);
 				}
+				
+				int contador=Integer.valueOf(lblContador.getText());
+
+				if (contador % 2 != 0) {
+					contador++;
+					lblContador.setText(String.valueOf(contador));
+					
+					lblComparar.setText(btnCarta4.getText());
+				}
+				else if(contador%2==0) {
+					contador++;
+					lblContador.setText(String.valueOf(contador));
+					
+					if(!(btnCarta4.getText().equals(lblComparar.getText()))) {
+						panelPerder.setVisible(true);
+						panel1.setVisible(false);
+					}
+
+				}
+				
+				if(contador==6) {
+					panelGanar.setVisible(true);
+					panel1.setVisible(false);
+				}
 			}
 		});
 
@@ -236,6 +327,30 @@ public class Parejas extends JFrame {
 				}
 				if (btnCarta5.getText().equals("3")) {
 					btnCarta5.setBackground(Color.PINK);
+				}
+				
+				int contador=Integer.valueOf(lblContador.getText());
+
+				if (contador % 2 != 0) {
+					contador++;
+					lblContador.setText(String.valueOf(contador));
+					
+					lblComparar.setText(btnCarta5.getText());
+				}
+				else if(contador%2==0) {
+					contador++;
+					lblContador.setText(String.valueOf(contador));
+					
+					if(!(btnCarta5.getText().equals(lblComparar.getText()))) {
+						panelPerder.setVisible(true);
+						panel1.setVisible(false);
+					}
+
+				}
+				
+				if(contador==6) {
+					panelGanar.setVisible(true);
+					panel1.setVisible(false);
 				}
 			}
 		});
@@ -252,48 +367,36 @@ public class Parejas extends JFrame {
 				if (btnCarta6.getText().equals("3")) {
 					btnCarta6.setBackground(Color.PINK);
 				}
+				
+				int contador=Integer.valueOf(lblContador.getText());
+
+				if (contador % 2 != 0) {
+					contador++;
+					lblContador.setText(String.valueOf(contador));
+					
+					lblComparar.setText(btnCarta6.getText());
+				}
+				else if(contador%2==0) {
+					contador++;
+					lblContador.setText(String.valueOf(contador));
+					
+					if(!(btnCarta6.getText().equals(lblComparar.getText()))) {
+						panelPerder.setVisible(true);
+						panel1.setVisible(false);
+					}
+
+				}
+				
+				if(contador==6) {
+					panelGanar.setVisible(true);
+					panel1.setVisible(false);
+				}
 			}
 		});
 
 	}
 
-	public void compararBotones(JPanel panelGanar, JPanel panelPerder, JPanel panel1, JLabel lblContador,
-			JButton boton) {
-
-		int n1 = 0;
-
-		n1 += Integer.valueOf(lblContador.getText());
-
-		if (n1 % 2 == 0) {
-			if (boton.getText().equals(boton.getText())) {
-				panelGanar.setVisible(true);
-			} else {
-				panelPerder.setVisible(true);
-				panel1.setVisible(false);
-			}
-		}
-		n1 = Integer.parseInt(lblContador.getText());
-		n1++;
-
-	}
-
-	/*
-	 * public void tiradas (JPanel panelPerder, JPanel panel1, JLabel lblContador,
-	 * JButton boton) { 
-	 * 
-	 * int n1=0;
-	 * 
-	 * n1 += Integer.valueOf(lblContador.getText()); 
-	 * if(n1%2!= 0) {
-	 * boton.setBackground(Color.GREEN); 
-	 * } else if(n1%2==0){
-	 * boton.setBackground(Color.RED); panelPerder.setVisible(true);
-	 * panel1.setVisible(false); 
-	 * } 
-	 * n1= Integer.parseInt(lblContador.getText());
-	 * 
-	 * n1++; }
-	 */
+	
 
 	public void numerarParejas(ArrayList<Integer> cartas, JButton btnCarta1, JButton btnCarta2, JButton btnCarta3,
 			JButton btnCarta4, JButton btnCarta5, JButton btnCarta6) {
