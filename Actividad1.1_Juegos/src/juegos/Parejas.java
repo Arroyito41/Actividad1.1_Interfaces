@@ -12,6 +12,8 @@ import java.util.ArrayList;
 
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+import javax.swing.Timer;
+
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -41,6 +43,7 @@ public class Parejas extends JFrame {
 	 * Create the frame.
 	 */
 	public Parejas() {
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -50,23 +53,27 @@ public class Parejas extends JFrame {
 		contentPane.setLayout(null);
 
 		JPanel panelIntro = new JPanel();
+		panelIntro.setBackground(new Color(198, 236, 240));
 		panelIntro.setBounds(10, 10, 416, 243);
 		contentPane.add(panelIntro);
 		panelIntro.setLayout(null);
 
 		JPanel panelGanar = new JPanel();
+		panelGanar.setBackground(new Color(255, 255, 255));
 		panelGanar.setBounds(10, 10, 416, 243);
 		contentPane.add(panelGanar);
 		panelGanar.setLayout(null);
 		panelGanar.setVisible(false);
 
 		JPanel panelPerder = new JPanel();
+		panelPerder.setBackground(new Color(0, 0, 0));
 		panelPerder.setBounds(10, 10, 416, 243);
 		contentPane.add(panelPerder);
 		panelPerder.setLayout(null);
 		panelPerder.setVisible(false);
 
 		JPanel panel1 = new JPanel();
+		panel1.setBackground(new Color(222, 220, 252));
 		panel1.setBounds(10, 10, 416, 243);
 		contentPane.add(panel1);
 		panel1.setLayout(null);
@@ -92,6 +99,14 @@ public class Parejas extends JFrame {
 		lblParejas.setHorizontalAlignment(SwingConstants.CENTER);
 		lblParejas.setBounds(64, 35, 301, 38);
 		panelIntro.add(lblParejas);
+		
+		JLabel lblGanar = new JLabel("TE HAS PASADO EL JUEGO");
+		lblGanar.setBackground(new Color(255, 255, 255));
+		lblGanar.setForeground(new Color(128, 0, 255));
+		lblGanar.setBounds(64, 87, 289, 26);
+		panelGanar.add(lblGanar);
+		lblGanar.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lblGanar.setHorizontalAlignment(SwingConstants.CENTER);
 
 		JLabel lblContador = new JLabel("1");
 		lblContador.setBounds(30, 11, 45, 13);
@@ -104,14 +119,12 @@ public class Parejas extends JFrame {
 		lblComparar.setVisible(false);
 
 		JLabel lblPerdido = new JLabel("HAS PERDIDO");
+		lblPerdido.setBackground(new Color(0, 0, 0));
+		lblPerdido.setForeground(new Color(255, 255, 0));
+		lblPerdido.setFont(new Font("Tahoma", Font.BOLD, 18));
 		lblPerdido.setHorizontalAlignment(SwingConstants.CENTER);
-		lblPerdido.setBounds(138, 112, 120, 34);
+		lblPerdido.setBounds(54, 112, 298, 34);
 		panelPerder.add(lblPerdido);
-
-		JLabel lblGanar = new JLabel("HAS GANADO");
-		lblGanar.setHorizontalAlignment(SwingConstants.CENTER);
-		lblGanar.setBounds(138, 112, 133, 26);
-		panelGanar.add(lblGanar);
 
 		JButton btnCarta1 = new JButton();
 		btnCarta1.setFont(new Font("Tahoma", Font.PLAIN, 11));
@@ -161,10 +174,9 @@ public class Parejas extends JFrame {
 		numerarParejas(cartas, btnCarta1, btnCarta2, btnCarta3, btnCarta4, btnCarta5, btnCarta6);
 
 		btnCarta1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-				
-				
+			
+				public void actionPerformed(ActionEvent e) {
+					
 				if (btnCarta1.getText().equals("1")) {
 					btnCarta1.setBackground(Color.GREEN);
 				}
@@ -176,7 +188,7 @@ public class Parejas extends JFrame {
 				}
 
 				int contador=Integer.valueOf(lblContador.getText());
-
+				
 				if (contador % 2 != 0) {
 					contador++;
 					lblContador.setText(String.valueOf(contador));
@@ -191,20 +203,20 @@ public class Parejas extends JFrame {
 						panelPerder.setVisible(true);
 						panel1.setVisible(false);
 					}
-
 				}
 				
 				if(contador==6) {
 					panelGanar.setVisible(true);
 					panel1.setVisible(false);
-				}
+				}			
 			}
 
 		});
 
 		btnCarta2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
+			
+				public void actionPerformed(ActionEvent e) {
+				
 				if (btnCarta2.getText().equals("1")) {
 					btnCarta2.setBackground(Color.GREEN);
 				}
@@ -216,7 +228,7 @@ public class Parejas extends JFrame {
 				}
 				
 				int contador=Integer.valueOf(lblContador.getText());
-
+				
 				if (contador % 2 != 0) {
 					contador++;
 					lblContador.setText(String.valueOf(contador));
@@ -233,16 +245,16 @@ public class Parejas extends JFrame {
 					}
 
 				}
-				
 				if(contador==6) {
 					panelGanar.setVisible(true);
 					panel1.setVisible(false);
-				}
+				}	
 			}
 		});
 
 		btnCarta3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+			
+				public void actionPerformed(ActionEvent e) {
 
 				if (btnCarta3.getText().equals("1")) {
 					btnCarta3.setBackground(Color.GREEN);
@@ -255,7 +267,7 @@ public class Parejas extends JFrame {
 				}
 				
 				int contador=Integer.valueOf(lblContador.getText());
-
+				
 				if (contador % 2 != 0) {
 					contador++;
 					lblContador.setText(String.valueOf(contador));
@@ -275,12 +287,13 @@ public class Parejas extends JFrame {
 				if(contador==6) {
 					panelGanar.setVisible(true);
 					panel1.setVisible(false);
-				}
+				}	
 			}
 		});
 
 		btnCarta4.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+			
+				public void actionPerformed(ActionEvent e) {
 
 				if (btnCarta4.getText().equals("1")) {
 					btnCarta4.setBackground(Color.GREEN);
@@ -293,7 +306,7 @@ public class Parejas extends JFrame {
 				}
 				
 				int contador=Integer.valueOf(lblContador.getText());
-
+				
 				if (contador % 2 != 0) {
 					contador++;
 					lblContador.setText(String.valueOf(contador));
@@ -308,19 +321,20 @@ public class Parejas extends JFrame {
 						panelPerder.setVisible(true);
 						panel1.setVisible(false);
 					}
-
 				}
 				
 				if(contador==6) {
 					panelGanar.setVisible(true);
 					panel1.setVisible(false);
-				}
+				}	
 			}
 		});
 
 		btnCarta5.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+			
 
+				public void actionPerformed(ActionEvent e) {
+					
 				if (btnCarta5.getText().equals("1")) {
 					btnCarta5.setBackground(Color.GREEN);
 				}
@@ -332,7 +346,7 @@ public class Parejas extends JFrame {
 				}
 				
 				int contador=Integer.valueOf(lblContador.getText());
-
+				
 				if (contador % 2 != 0) {
 					contador++;
 					lblContador.setText(String.valueOf(contador));
@@ -353,12 +367,13 @@ public class Parejas extends JFrame {
 				if(contador==6) {
 					panelGanar.setVisible(true);
 					panel1.setVisible(false);
-				}
+				}	
 			}
 		});
 
 		btnCarta6.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+			
+				public void actionPerformed(ActionEvent e) {
 
 				if (btnCarta6.getText().equals("1")) {
 					btnCarta6.setBackground(Color.GREEN);
@@ -371,7 +386,7 @@ public class Parejas extends JFrame {
 				}
 				
 				int contador=Integer.valueOf(lblContador.getText());
-
+				
 				if (contador % 2 != 0) {
 					contador++;
 					lblContador.setText(String.valueOf(contador));
@@ -392,13 +407,10 @@ public class Parejas extends JFrame {
 				if(contador==6) {
 					panelGanar.setVisible(true);
 					panel1.setVisible(false);
-				}
+				}	
 			}
 		});
-
 	}
-
-	
 
 	public void numerarParejas(ArrayList<Integer> cartas, JButton btnCarta1, JButton btnCarta2, JButton btnCarta3,
 			JButton btnCarta4, JButton btnCarta5, JButton btnCarta6) {

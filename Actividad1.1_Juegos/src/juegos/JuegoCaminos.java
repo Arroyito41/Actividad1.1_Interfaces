@@ -75,10 +75,15 @@ public class JuegoCaminos extends JFrame {
 		panelInstrucciones.add(btnEmpezar);
 
 		JPanel panelGanar = new JPanel();
-		panelGanar.setBackground(new Color(0, 255, 128));
+		panelGanar.setBackground(new Color(165, 250, 150));
 		panelGanar.setBounds(0, -24, 436, 287);
 		contentPane.add(panelGanar);
 		panelGanar.setLayout(null);
+		panelGanar.setVisible(false);
+		
+		JButton btnContinuar = new JButton("CONTINUAR");
+		btnContinuar.setBounds(91, 226, 233, 23);
+		panelGanar.add(btnContinuar);
 
 		JLabel lblGanar = new JLabel("Has Ganado");
 		lblGanar.setHorizontalAlignment(SwingConstants.CENTER);
@@ -410,9 +415,6 @@ public class JuegoCaminos extends JFrame {
 					panelC2.setVisible(false);
 					panelC3.setVisible(false);
 
-					JuegoCartas abrir = new JuegoCartas();
-					abrir.setVisible(true);
-					
 				} else {
 					panelInstrucciones.setVisible(false);
 					panelGanar.setVisible(false);
@@ -422,6 +424,13 @@ public class JuegoCaminos extends JFrame {
 					panelC3.setVisible(false);
 				}
 
+			}
+		});
+		
+		btnContinuar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JuegoCartas abrir = new JuegoCartas();
+				abrir.setVisible(true);
 			}
 		});
 
