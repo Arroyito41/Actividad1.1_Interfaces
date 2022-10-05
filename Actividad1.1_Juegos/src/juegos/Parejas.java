@@ -163,6 +163,8 @@ public class Parejas extends JFrame {
 		btnCarta1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
+				
+				
 				if (btnCarta1.getText().equals("1")) {
 					btnCarta1.setBackground(Color.GREEN);
 				}

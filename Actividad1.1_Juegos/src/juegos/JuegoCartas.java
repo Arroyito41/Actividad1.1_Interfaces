@@ -11,6 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.SwingConstants;
+import javax.swing.Timer;
 import javax.swing.JButton;
 import java.awt.Color;
 
@@ -20,6 +21,7 @@ public class JuegoCartas extends JFrame {
 	private final JPanel panelPrincipal = new JPanel();
 	private final JPanel panelVictoria = new JPanel();
 	private final JPanel panelEmpate = new JPanel();
+	public Timer tiempo;
 
 	/**
 	 * Launch the application.
@@ -41,7 +43,6 @@ public class JuegoCartas extends JFrame {
 	 * Create the frame.
 	 */
 	public JuegoCartas() {
-		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -96,6 +97,15 @@ public class JuegoCartas extends JFrame {
 		lblRes1.setBounds(223, 61, 45, 13);
 		panelPrincipal.add(lblRes1);
 		
+		JButton btnCroupier = new JButton("Croupier");
+		btnCroupier.setBounds(168, 112, 85, 21);
+		panelPrincipal.add(btnCroupier);
+		
+		JButton btnContinuar = new JButton("CONTINUAR");
+		panelVictoria.add(btnContinuar);
+		btnCroupier.setVisible(false);
+		btnContinuar.setBounds(168, 189, 119, 24);
+		
 		panelEmpate.setBounds(0, 0, 434, 261);
 		contentPane.add(panelEmpate);
 		panelEmpate.setLayout(null);
@@ -140,13 +150,13 @@ public class JuegoCartas extends JFrame {
 		lblTitulo.setBounds(105, 23, 238, 30);
 		panelInstrucciones.add(lblTitulo);
 
-		JLabel lblInstrucciones1 = new JLabel("Esta pruba consiste en la suma de las dos cartas");
+		JLabel lblInstrucciones1 = new JLabel("En esta prueba tendras que conseguir mas puntos que el crupier");
 		lblInstrucciones1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblInstrucciones1.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblInstrucciones1.setBounds(34, 80, 364, 37);
+		lblInstrucciones1.setBounds(10, 80, 414, 69);
 		panelInstrucciones.add(lblInstrucciones1);
 
-		JLabel lblInstrucciones2 = new JLabel("el que mas sume gana la prueba");
+		JLabel lblInstrucciones2 = new JLabel("El maximo de puntos es 21, si te pasas pierdes.");
 		lblInstrucciones2.setHorizontalAlignment(SwingConstants.CENTER);
 		lblInstrucciones2.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblInstrucciones2.setBounds(34, 112, 364, 37);
@@ -164,11 +174,34 @@ public class JuegoCartas extends JFrame {
 				panelInstrucciones.setVisible(false);
 			}
 		});
-
+		
 		btnJugar.addActionListener(new ActionListener() {
 			int res1 = 0;
-			int res2 = 0;
-
+			int res2 = 0 ;
+			
+			Timer timer = new Timer (5000, new ActionListener ()
+			{
+			    public void actionPerformed(ActionEvent e)
+			    {
+			    	if (res1 == res2) {
+						panelEmpate.setVisible(true);
+						panelPrincipal.setVisible(false);
+					} else if ((res1 > res2) && (res1 <= 21)) {
+						panelDerrota.setVisible(true);
+						panelPrincipal.setVisible(false);
+						panelVictoria.setVisible(false);
+					} else if ((res2 > res1) && (res2 <= 21)) {
+						panelDerrota.setVisible(false);
+						panelVictoria.setVisible(true);
+						panelPrincipal.setVisible(false);
+						
+					} else if ((res1 > 21) && (res2 <= 21)) {
+						panelDerrota.setVisible(false);
+						panelVictoria.setVisible(true);
+						panelPrincipal.setVisible(false);
+					}
+			     }
+			});
 			public void actionPerformed(ActionEvent e) {
 				btnJugar.setVisible(false);
 				btnPedir.setVisible(true);
@@ -195,34 +228,35 @@ public class JuegoCartas extends JFrame {
 						}
 					}
 				});
+				
 				btnPlantarse.addActionListener(new ActionListener() {
-
 					public void actionPerformed(ActionEvent e) {
-						while (res1 <= 16) {
-							int random1 = (int) (1 + Math.random() * 10);
-							btnCarta1.setText(String.valueOf(random1));
-							res1 += random1;
-							lblRes1.setText(String.valueOf(res1));
-						}
-						if (res1 == res2) {
-							panelEmpate.setVisible(true);
-						} else if ((res1 > res2) && (res1 <= 21)) {
-							panelDerrota.setVisible(true);
-							panelPrincipal.setVisible(false);
-							panelVictoria.setVisible(false);
-						} else if ((res2 > res1) && (res2 <= 21)) {
-							panelDerrota.setVisible(false);
-							panelVictoria.setVisible(true);
-							panelPrincipal.setVisible(false);
-						} else if ((res1 > 21) && (res2 <= 21)) {
-							panelDerrota.setVisible(false);
-							panelVictoria.setVisible(true);
-							panelPrincipal.setVisible(false);
-						}
+						btnPedir.setVisible(false);
+						btnPlantarse.setVisible(false);
+						btnCroupier.setVisible(true);
+						btnCroupier.addActionListener(new ActionListener() {
+							public void actionPerformed(ActionEvent e) {
+								if (res1 <= 16) {
+								int random1 = (int) (1 + Math.random() * 10);
+								btnCarta1.setText(String.valueOf(random1));
+								res1 += random1;
+								lblRes1.setText(String.valueOf(res1));
+								}
+							timer.start();
+							}
+						});
 					}
 				});
 			}
+		}); 
+		
+		btnContinuar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Parejas abrir = new Parejas();
+				abrir.setVisible(true);
+			}
 		});
-
+		
 	}
 }
